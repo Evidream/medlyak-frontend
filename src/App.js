@@ -1,10 +1,16 @@
 import React from 'react';
-import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>💌 Медляк готов. Ждём тебя в Telegram!</h1>
+    <div style={{
+      fontFamily: 'sans-serif',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: '100vh',
+      fontSize: '28px'
+    }}>
+      💖 Медляк запущен! Всё работает!
     </div>
   );
 }
