@@ -1,25 +1,44 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// index.js — основной роутинг
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from 'react-router-dom';
 
-import Welcome from "./screens/Welcome";
-import UserIntro from "./screens/UserIntro";
-import QuizIntro from "./screens/QuizIntro";
-import SwipePsychology from "./screens/SwipePsychology";
+import './index.css';
 
-import "./App.css"; // или './index.css', если ты используешь index.css
+import Welcome from './screens/Welcome';
+import UserIntro from './screens/UserIntro';
+import QuizIntro from './screens/QuizIntro';
+import PsychologyBlock from './screens/PsychologyBlock';
+import SwipePsychology from './screens/SwipePsychology';
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Welcome />,
+  },
+  {
+    path: '/user-intro',
+    element: <UserIntro />,
+  },
+  {
+    path: '/quiz-intro',
+    element: <QuizIntro />,
+  },
+  {
+    path: '/psychology-block',
+    element: <PsychologyBlock />,
+  },
+  {
+    path: '/swipe-psychology',
+    element: <SwipePsychology />,
+  },
+]);
 
-root.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Router>
-      <Routes>
-        <Route path="/" element={<Welcome />} />
-        <Route path="/user-intro" element={<UserIntro />} />
-        <Route path="/quiz-intro" element={<QuizIntro />} />
-        <Route path="/swipe-psychology" element={<SwipePsychology />} />
-      </Routes>
-    </Router>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
