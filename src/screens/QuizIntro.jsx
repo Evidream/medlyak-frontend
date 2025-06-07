@@ -9,17 +9,21 @@ const QuizIntro = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-white text-center">
-      <h1 className="text-3xl font-bold mb-4">💬 Психология</h1>
-      <p className="text-lg mb-6 max-w-md">
-        Очень важно, чтобы люди не только нравились друг другу внешне, но и подходили психологически.
-        Этот блок поможет понять, кто тебе действительно подойдёт.
+    <div className="flex flex-col items-center justify-center h-screen bg-[#f8f4ec] px-6">
+      <h1 className="text-3xl font-bold text-center mb-6">
+        Это не просто анкета.
+      </h1>
+      <p className="text-lg text-center max-w-md mb-6">
+        Мы постарались создать шанс. Не по лайкам, не по фоткам — а по тебе.
+        <br /><br />
+        Сейчас будут 5 блоков: психология, физиология, повадки, привычки и бытовуха.
+        Отвечай честно. Это займет 10 минут, но поможет найти кого-то по-настоящему тебе подходящего.
       </p>
       <button
-        onClick={handleStart}
         className="bg-black text-white px-6 py-3 rounded-full text-lg hover:bg-gray-800 transition"
+        onClick={handleStart}
       >
-        Начать
+        Начать с психологии
       </button>
     </div>
   );
