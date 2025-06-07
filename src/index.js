@@ -8,7 +8,6 @@ import {
 } from "react-router-dom";
 
 import Welcome from "./screens/Welcome";
-import QuizIntro from "./screens/QuizIntro";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,7 +15,6 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<Welcome />} />
-        <Route path="/quiz" element={<QuizIntro />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
