@@ -1,56 +1,22 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function PsychologyBlock() {
   const navigate = useNavigate();
 
-  const handleStart = () => {
-    navigate('/swipe/psychology');
-  };
-
   return (
-    <div style={styles.container}>
-      <h1 style={styles.heading}>Блок 1: Психология 🧠</h1>
-      <p style={styles.text}>
-        Очень важно не просто нравиться друг другу, но и подходить психологически.
-        Кто-то — шторм. Кто-то — берег. Важно понять, как вы реагируете в трудные моменты,
-        как проявляете чувства и чего ждёте от другого.
+    <div style={{ padding: "40px", textAlign: "center" }}>
+      <h2>🧠 Блок: Психология</h2>
+      <p>
+        Мы знаем, что настоящая совместимость — это не только вкус к пасте и фильмам. Это про характер, привычки, реакцию на стресс.
+        Будь честен в ответах — это поможет найти того самого человека.
       </p>
-      <button style={styles.button} onClick={handleStart}>
-        Начать
+      <button
+        style={{ marginTop: "20px", padding: "10px 20px" }}
+        onClick={() => navigate("/swipe-psychology")}
+      >
+        Поехали
       </button>
     </div>
   );
 }
-
-const styles = {
-  container: {
-    height: '100vh',
-    backgroundColor: '#fdf6f0',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: '2rem',
-    textAlign: 'center',
-    fontFamily: 'sans-serif',
-  },
-  heading: {
-    fontSize: '2rem',
-    marginBottom: '1rem',
-  },
-  text: {
-    fontSize: '1.2rem',
-    maxWidth: '600px',
-    marginBottom: '2rem',
-  },
-  button: {
-    padding: '1rem 2rem',
-    fontSize: '1rem',
-    backgroundColor: '#000',
-    color: '#fff',
-    border: 'none',
-    borderRadius: '8px',
-    cursor: 'pointer',
-  },
-};
