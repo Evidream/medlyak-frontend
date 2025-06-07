@@ -4,6 +4,10 @@ import { useNavigate } from "react-router-dom";
 export default function Welcome() {
   const navigate = useNavigate();
 
+  const handleStart = () => {
+    navigate("/intro");
+  };
+
   return (
     <div
       style={{
@@ -18,7 +22,7 @@ export default function Welcome() {
         textAlign: "center",
       }}
     >
-      <h1 style={{ fontSize: "2rem", marginBottom: "1rem" }}>
+      <h1 style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "1rem" }}>
         🕯 Добро пожаловать в Медляк
       </h1>
       <p
@@ -29,11 +33,10 @@ export default function Welcome() {
           color: "#444",
         }}
       >
-        Здесь тебя не оценивают по внешности. Только голос, душа и совпадение
-        смыслов. Один чат. Один день. По-настоящему.
+        Здесь тебя не оценивают по внешности. Только голос, душа и совпадение смыслов. Один чат. Один день. По-настоящему.
       </p>
       <button
-        onClick={() => navigate("/quiz")}
+        onClick={handleStart}
         style={{
           padding: "12px 24px",
           fontSize: "1rem",
