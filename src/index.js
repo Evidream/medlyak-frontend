@@ -1,23 +1,19 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import App from './App';
+import Welcome from './Welcome';
+import UserInfo from './UserInfo';
+import './index.css';
 
-import Welcome from "./screens/Welcome";
-import QuizIntro from "./screens/QuizIntro";
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
       <Routes>
         <Route path="/" element={<Welcome />} />
-        <Route path="/intro" element={<QuizIntro />} />
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/register" element={<UserInfo />} />
+        <Route path="/app" element={<App />} />
       </Routes>
     </Router>
   </React.StrictMode>
